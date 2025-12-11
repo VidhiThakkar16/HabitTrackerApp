@@ -109,11 +109,6 @@ Open the project in Android Studio
 
 * Export habits to PDF/Excel
 
-## ScreenShots:
-| Login | Dashboard | Add Habit |
-|-------|-----------|-----------|
-| ![](screenshots/login.png) | ![](screenshots/dashboard.png) | ![](screenshots/addhabit.png) |
-
 
 ## 👩‍💻 Author
 
