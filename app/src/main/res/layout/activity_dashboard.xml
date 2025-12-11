@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    📄 activity_dashboard.xml
+    This layout is used for the main Dashboard screen of the Habit Tracker app.
+    It displays the list of habits, provides search & filter options,
+    and includes Floating Action Buttons for adding habits, viewing progress, and logging out.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 🔍 Search & Filter Section (Top Bar) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <!-- Search bar to find habits by name -->
+        <AutoCompleteTextView
+            android:id="@+id/autoSearchHabit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_habit"
+            android:completionThreshold="2"
+            android:padding="8dp"
+            android:background="@android:drawable/edit_text"/>
+
+        <!-- Category filter dropdown to filter habits by category -->
+        <Spinner
+            android:id="@+id/spFilterCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:entries="@array/category_array"/>
+    </LinearLayout>
+
+    <!-- 📋 Habit List Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHabits"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"/>
+
+    <!-- 🧭 Floating Action Buttons Section (Bottom Area) -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ➕ Add Habit FAB: Opens AddHabitActivity to create a new habit -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddHabit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- 📈 Progress FAB: Opens progress tracking screen -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="96dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_progress"
+            android:contentDescription="@string/view_progress"/>
+
+        <!-- 🚪 Logout FAB: Logs out the user and returns to login screen -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_logout"
+            android:contentDescription="@string/logout_desc"
+            app:backgroundTint="#B00020"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_progress.xml
+    Layout for the Habit Progress screen.
+    Displays summary statistics, progress bars, motivational message, and logout button.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🔹 Scrollable content container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:background="#FAFAFA">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 🔸 Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_habit_progress"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="24dp"
+                android:textColor="#212121"/>
+
+            <!-- 🔸 Stats Cards Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_marginBottom="24dp">
+
+                <!-- 🟣 Total Habits Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- Total number of habits -->
+                        <TextView
+                            android:id="@+id/txtTotalHabits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#6200EE"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_habits"
+                            android:textSize="14sp"
+                            android:textColor="#555"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 🟢 Completed Habits Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- Number of completed habits -->
+                        <TextView
+                            android:id="@+id/txtCompletedHabits"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#4CAF50"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/completed"
+                            android:textSize="14sp"
+                            android:textColor="#555"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 🟠 Completion Percentage Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <!-- Completion % of habits -->
+                        <TextView
+                            android:id="@+id/txtCompletionPercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_0pr"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#FF9800"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/completion"
+                            android:textSize="14sp"
+                            android:textColor="#555"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <!-- 🔹 Progress Bar for visual completion -->
+            <ProgressBar
+                android:id="@+id/progressBarCompletion"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:progress="0"
+                android:max="100"
+                android:progressTint="#6200EE"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- 🔹 Motivational Message -->
+            <TextView
+                android:id="@+id/txtMotivation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keep_going_you_can_achieve_great_things"
+                android:textSize="16sp"
+                android:textColor="#212121"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#EDE7F6"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:clipToOutline="true"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="12dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 🔘 Logout Floating Action Button (bottom-right) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLogoutProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_logout"
+        android:contentDescription="@string/logout_desc"
+        app:backgroundTint="#B00020"/>
+</FrameLayout>

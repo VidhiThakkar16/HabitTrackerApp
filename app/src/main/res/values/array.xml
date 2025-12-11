@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Frequency options -->
+    <string-array name="frequency_options">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <!-- Category options -->
+    <string-array name="category_options">
+        <item>Health</item>
+        <item>Fitness</item>
+        <item>Study</item>
+        <item>Work</item>
+        <item>Leisure</item>
+        <item>Other</item>
+    </string-array>
+</resources>

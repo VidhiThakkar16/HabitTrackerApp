@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    📄 activity_habit_detail.xml
+    This layout is used for the Habit Detail screen.
+    It allows users to view, update, and delete a selected habit.
+    The UI is scrollable to accommodate all fields on smaller screens.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#F9F9F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 📝 Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/habit_details"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp"
+            android:textColor="#6200EE"/>
+
+        <!-- ✍️ Editable field for Habit Name -->
+        <EditText
+            android:id="@+id/txtDetailName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/habit_name"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <!-- 📂 Spinner for selecting Category -->
+        <Spinner
+            android:id="@+id/spDetailCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 🔁 Editable field for Frequency -->
+        <EditText
+            android:id="@+id/txtDetailFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/frequency"
+            android:padding="16dp"
+            android:background="@drawable/rounded_edittext1"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <!-- 📝 Multi-line editable field for Description -->
+        <EditText
+            android:id="@+id/txtDetailDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description"
+            android:padding="16dp"
+            android:minLines="3"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:textColor="#000"
+            android:textSize="16sp"/>
+
+        <!-- ✅ Checkbox to mark the habit as completed -->
+        <CheckBox
+            android:id="@+id/chkDetailCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/completed"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:textColor="#000"/>
+
+        <!-- 💾 Save Changes button to update habit details -->
+        <Button
+            android:id="@+id/btnSaveHabit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_changes"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 🗑️ Delete button to remove the habit -->
+        <Button
+            android:id="@+id/btnDeleteHabit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_habit"
+            android:backgroundTint="#B00020"
+            android:textColor="#FFF"
+            android:padding="12dp"/>
+    </LinearLayout>
+</ScrollView>

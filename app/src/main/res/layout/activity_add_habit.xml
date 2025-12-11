@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    📄 activity_add.xml
+    This layout is used for the "Add New Habit" screen.
+    It allows users to enter habit details like name, frequency, category, and description,
+    and then save the habit to the database.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- 📌 LinearLayout inside ScrollView ensures the form scrolls if content overflows -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 📝 Title of the screen -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Habit"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="24dp" />
+
+        <!-- ✏️ Input field for Habit Name -->
+        <EditText
+            android:id="@+id/etHabitName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habit Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ⏰ Frequency Spinner: lets user choose how often the habit occurs -->
+        <!-- Uses string-array from strings.xml -->
+        <Spinner
+            android:id="@+id/spFrequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/frequency_array"
+        android:layout_marginBottom="16dp" />
+
+        <!-- 🧭 Category Spinner: lets user choose the habit category (e.g., Health, Study, etc.) -->
+        <!-- Uses string-array from strings.xml -->
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/category_array"
+        android:layout_marginBottom="16dp" />
+
+        <!-- 📝 Input for Habit Description -->
+        <EditText
+            android:id="@+id/etHabitDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:minLines="3"
+            android:background="@android:drawable/edit_text"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 💾 Save Button: triggers saving the habit data to DB -->
+        <Button
+            android:id="@+id/btnSaveHabit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Habit"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFF"
+            android:padding="12dp" />
+    </LinearLayout>
+</ScrollView>

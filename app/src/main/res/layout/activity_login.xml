@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_login.xml
+    Layout for the Login Screen of the HabitMate app.
+    This screen allows users to enter their username and password to log in.
+    It includes app branding (logo & title), input fields, a login button,
+    and a register link for new users.
+-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="24dp">
+
+    <!-- 🔸 App Logo -->
+    <ImageView
+        android:id="@+id/loginLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_app_logo"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/app_name" />
+
+    <!-- 🔸 App Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HabitMate"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#4A148C"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 🔸 Subtext / Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track. Improve. Succeed."
+        android:textColor="#7B1FA2"
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- 📝 Username Input Field with start icon -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        app:startIconDrawable="@android:drawable/ic_menu_edit">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 📝 Password Input Field with start icon and masked input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 🔘 Login Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="16dp"
+        android:paddingVertical="12dp"
+        android:backgroundTint="#6A1B9A"
+        android:textColor="@android:color/white" />
+
+    <!-- 🔗 Register Text Link (Navigates to Register screen) -->
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Register"
+        android:textColor="#8E24AA"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

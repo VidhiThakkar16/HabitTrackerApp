@@ -1,0 +1,55 @@
+<!--
+    activity_splash.xml
+    Layout for the Splash screen displayed when the app launches.
+    Shows app logo, title, tagline, and a loading ProgressBar.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backgroundLight"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SplashActivity">
+
+    <!-- 🔹 App Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_app_logo"
+        app:tint="@color/colorPrimary"
+        android:layout_marginBottom="20dp" />
+
+    <!-- 🔹 App Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HabitMate"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <!-- 🔹 Tagline / Subtext -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track. Improve. Succeed."
+        android:textColor="@color/textSecondary"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 🔘 Loading ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progressTint="@color/colorPrimary" />
+
+</LinearLayout>

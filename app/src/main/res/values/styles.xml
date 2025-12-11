@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Card Title Text -->
+    <style name="HabitTitleText">
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Card Subtitle Text -->
+    <style name="HabitSubtitleText">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+</resources>
