@@ -81,7 +81,42 @@ It offers a clean user interface, category-based habit organization, progress tr
 7. **Logout**
    - Session cleared.
    - Redirects user back to the Login screen.
-  
+
+## 📸 Screenshots
+
+### Main Screens
+
+<table>
+  <tr>
+    <td><strong>Splash Screen</strong></td>
+    <td><strong>Login</strong></td>
+    <td><strong>Register</strong></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/ss1.jpg" width="250" height="500"></td>
+    <td><img src="screenshots/login.jpg" width="250" height="500"></td>
+    <td><img src="screenshots/ss4.jpg" width="250" height="500"></td>
+  </tr>
+</table>
+
+### App Features
+
+<table>
+  <tr>
+    <td><strong>Dashboard</strong></td>
+    <td><strong>Add Habit</strong></td>
+    <td><strong>Habit Details</strong></td>
+    <td><strong>Progress</strong></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/dashbd.jpg" width="250" height="500"></td>
+    <td><img src="screenshots/add.jpg" width="250" height="500"></td>
+    <td><img src="screenshots/hbtdetail.jpg" width="250" height="500"></td>
+    <td><img src="screenshots/progress.jpg" width="250" height="500"></td>
+  </tr>
+</table>
+
+
 
 ## 🚀 Setup & Installation
  1. Clone this Repository:
